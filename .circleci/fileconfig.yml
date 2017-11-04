@@ -21,7 +21,8 @@ jobs:
       - checkout
       - run:
           name: Install librsvg2
-          command: 'sudo apt-get update -qq && apt-get install -y librsvg2-bin'
+          command: |
+            'sudo apt-get update -qq && apt-get install -y librsvg2-bin'
 
       # Download and cache dependencies
       - restore_cache:
